@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "lint:scripts": "eslint ./**/*.js",
-    "lint:styles": "stylelint ./**/*.css",
+    "lint:scripts": "eslint **/*.js",
+    "lint:styles": "stylelint **/*.css",
     "lint": "npm run lint:scripts && npm run lint:styles"
   },
   "devDependencies": {
