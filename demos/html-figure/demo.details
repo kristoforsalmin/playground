@@ -1,0 +1,10 @@
+/*
+---
+name: HTML <figure> element
+resources:
+  - https://necolas.github.io/normalize.css/7.0.0/normalize.css
+  - https://suitcss.github.io/base/lib/base.css
+  - https://github.io/racse1/playground/styles/main.css
+normalize_css: no
+...
+*/
