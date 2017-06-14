@@ -24,15 +24,17 @@ function getKeyframes() {
   return [center, ...points, center];
 }
 
-const box = document.querySelector('.js-box');
-const boxImage = box.querySelector('.js-boxImage');
-const animation = boxImage.animate(getKeyframes(), {
-  duration: 1000,
-  easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const box = document.querySelector('.js-box');
+  const boxImage = box.querySelector('.js-boxImage');
+  const animation = boxImage.animate(getKeyframes(), {
+    duration: 1000,
+    easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
+  });
 
-animation.pause();
+  animation.pause();
 
-box.addEventListener('mouseenter', () => {
-  animation.play();
+  box.addEventListener('mouseenter', () => {
+    animation.play();
+  });
 });
