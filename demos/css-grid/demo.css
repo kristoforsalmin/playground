@@ -1,14 +1,26 @@
+:root {
+  --Container-padding-size: 20px;
+  --Grid-gap-size: 20px;
+  --Post-padding-size: 20px;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --Container-padding-size: 0;
+    --Grid-gap-size: 24px;
+    --Post-padding-size: 24px;
+  }
+}
+
 .d-Container {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: var(--Container-padding-size);
+  padding-left: var(--Container-padding-size);
 }
 
 @media (min-width: 600px) {
   .d-Container {
     width: 80%;
     max-width: 980px;
-    padding-right: 0;
-    padding-left: 0;
     margin-right: auto;
     margin-left: auto;
   }
@@ -20,29 +32,22 @@
 .d-Grid {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(-20px / 2);
+  margin: calc(var(--Grid-gap-size) / -2);
 }
 
 @supports (display: grid) {
   .d-Grid {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: var(--Grid-gap-size);
     grid-template-columns: 1fr;
     flex-wrap: initial;
     margin: initial;
   }
 }
 
-@media (min-width: 600px) {
-  .d-Grid {
-    margin: calc(-24px / 2);
-  }
-}
-
 @supports (display: grid) {
   @media (min-width: 600px) {
     .d-Grid {
-      grid-gap: 24px;
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -57,7 +62,7 @@
 .d-Grid-cell {
   min-width: 0;
   flex-basis: 100%;
-  padding: 10px;
+  padding: calc(var(--Grid-gap-size) / 2);
 }
 
 @supports (display: grid) {
@@ -82,18 +87,8 @@
   background-color: whitesmoke;
 }
 
-.d-Post-image {
-  width: 100%;
-}
-
 .d-Post-description {
-  padding: 20px;
-}
-
-@media (min-width: 600px) {
-  .d-Post-description {
-    padding: 24px;
-  }
+  padding: var(--Post-padding-size);
 }
 
 /* Utils
