@@ -1,0 +1,114 @@
+.d-Container {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media (min-width: 600px) {
+  .d-Container {
+    width: 80%;
+    max-width: 980px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/* Grid
+   ========================================================================== */
+
+.d-Grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(-20px / 2);
+}
+
+@supports (display: grid) {
+  .d-Grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    flex-wrap: initial;
+    margin: initial;
+  }
+}
+
+@media (min-width: 600px) {
+  .d-Grid {
+    margin: calc(-24px / 2);
+  }
+}
+
+@supports (display: grid) {
+  @media (min-width: 600px) {
+    .d-Grid {
+      grid-gap: 24px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 960px) {
+    .d-Grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.d-Grid-cell {
+  min-width: 0;
+  flex-basis: 100%;
+  padding: 10px;
+}
+
+@supports (display: grid) {
+  .d-Grid-cell {
+    min-width: initial;
+    flex-basis: initial;
+    padding: initial;
+  }
+
+  .d-Grid-cell[class*="u-md-size"],
+  .d-Grid-cell[class*="u-lg-size"] {
+    flex-basis: initial !important;
+    width: initial !important;
+  }
+}
+
+/* Post
+   ========================================================================== */
+
+.d-Post {
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+.d-Post-image {
+  width: 100%;
+}
+
+.d-Post-description {
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  .d-Post-description {
+    padding: 24px;
+  }
+}
+
+/* Utils
+   ========================================================================== */
+
+@media (min-width: 600px) {
+  .u-md-size1of2 {
+    flex-basis: auto !important;
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .u-lg-size1of3 {
+    flex-basis: auto !important;
+    width: calc(100% / 3) !important;
+  }
+}
