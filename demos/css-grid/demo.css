@@ -12,6 +12,9 @@
   }
 }
 
+/* Container
+   ========================================================================== */
+
 .d-Container {
   padding-right: var(--Container-padding-size);
   padding-left: var(--Container-padding-size);
