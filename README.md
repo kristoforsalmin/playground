@@ -1,6 +1,6 @@
 # Playground
 
-[![devDependency Status](https://david-dm.org/racse1/playground/dev-status.svg)](https://david-dm.org/racse1/playground#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/racse1/playground.svg)](https://david-dm.org/racse1/playground?type=dev)
 
 ## License
 
