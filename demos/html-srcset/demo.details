@@ -1,6 +1,6 @@
 /*
 ---
-name: HTML <picture> element
+name: HTML srcset attribute
 resources:
   - https://necolas.github.io/normalize.css/7.0.0/normalize.css
   - https://suitcss.github.io/base/lib/base.css
