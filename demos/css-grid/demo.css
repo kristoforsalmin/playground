@@ -1,14 +1,14 @@
 :root {
-  --Container-padding-size: 20px;
-  --Grid-gap-size: 20px;
-  --Post-padding-size: 20px;
+  --Container-paddingSize: 20px;
+  --Grid-gapSize: 20px;
+  --Post-paddingSize: 20px;
 }
 
 @media (min-width: 600px) {
   :root {
-    --Container-padding-size: 0;
-    --Grid-gap-size: 24px;
-    --Post-padding-size: 24px;
+    --Container-paddingSize: 0;
+    --Grid-gapSize: 24px;
+    --Post-paddingSize: 24px;
   }
 }
 
@@ -16,8 +16,8 @@
    ========================================================================== */
 
 .d-Container {
-  padding-right: var(--Container-padding-size);
-  padding-left: var(--Container-padding-size);
+  padding-right: var(--Container-paddingSize);
+  padding-left: var(--Container-paddingSize);
 }
 
 @media (min-width: 600px) {
@@ -35,13 +35,13 @@
 .d-Grid {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(var(--Grid-gap-size) / -2);
+  margin: calc(var(--Grid-gapSize) / -2);
 }
 
 @supports (display: grid) {
   .d-Grid {
     display: grid;
-    grid-gap: var(--Grid-gap-size);
+    grid-gap: var(--Grid-gapSize);
     grid-template-columns: 1fr;
     flex-wrap: initial;
     margin: initial;
@@ -65,7 +65,7 @@
 .d-Grid-cell {
   min-width: 0;
   flex-basis: 100%;
-  padding: calc(var(--Grid-gap-size) / 2);
+  padding: calc(var(--Grid-gapSize) / 2);
 }
 
 @supports (display: grid) {
@@ -91,7 +91,7 @@
 }
 
 .d-Post-description {
-  padding: var(--Post-padding-size);
+  padding: var(--Post-paddingSize);
 }
 
 /* Utils
