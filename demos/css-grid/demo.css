@@ -1,27 +1,17 @@
-:root {
-  --Container-paddingSize: 20px;
-  --Grid-gapSize: 20px;
-  --Post-paddingSize: 20px;
-}
-
-@media (min-width: 600px) {
-  :root {
-    --Container-paddingSize: 0;
-    --Grid-gapSize: 24px;
-    --Post-paddingSize: 24px;
-  }
-}
-
 /* Container
    ========================================================================== */
 
 .d-Container {
+  --Container-paddingSize: 20px;
+
   padding-right: var(--Container-paddingSize);
   padding-left: var(--Container-paddingSize);
 }
 
 @media (min-width: 600px) {
   .d-Container {
+    --Container-paddingSize: 0;
+
     width: 80%;
     max-width: 980px;
     margin-right: auto;
@@ -33,52 +23,26 @@
    ========================================================================== */
 
 .d-Grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--Grid-gapSize) / -2);
+  --Grid-gapSize: 20px;
+  --Grid-columns: 1fr;
+
+  display: grid;
+  grid-gap: var(--Grid-gapSize);
+  grid-template-columns: var(--Grid-columns);
+  flex-wrap: initial;
+  margin: initial;
 }
 
-@supports (display: grid) {
+@media (min-width: 600px) {
   .d-Grid {
-    display: grid;
-    grid-gap: var(--Grid-gapSize);
-    grid-template-columns: 1fr;
-    flex-wrap: initial;
-    margin: initial;
+    --Grid-gapSize: 24px;
+    --Grid-columns: repeat(2, 1fr);
   }
 }
 
-@supports (display: grid) {
-  @media (min-width: 600px) {
-    .d-Grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (min-width: 960px) {
-    .d-Grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-}
-
-.d-Grid-cell {
-  min-width: 0;
-  flex-basis: 100%;
-  padding: calc(var(--Grid-gapSize) / 2);
-}
-
-@supports (display: grid) {
-  .d-Grid-cell {
-    min-width: initial;
-    flex-basis: initial;
-    padding: initial;
-  }
-
-  .d-Grid-cell[class*="u-md-size"],
-  .d-Grid-cell[class*="u-lg-size"] {
-    flex-basis: initial !important;
-    width: initial !important;
+@media (min-width: 960px) {
+  .d-Grid {
+    --Grid-columns: repeat(3, 1fr);
   }
 }
 
@@ -86,6 +50,8 @@
    ========================================================================== */
 
 .d-Post {
+  --Post-paddingSize: 20px;
+
   height: 100%;
   background-color: whitesmoke;
 }
@@ -94,19 +60,8 @@
   padding: var(--Post-paddingSize);
 }
 
-/* Utils
-   ========================================================================== */
-
 @media (min-width: 600px) {
-  .u-md-size1of2 {
-    flex-basis: auto !important;
-    width: 50% !important;
-  }
-}
-
-@media (min-width: 960px) {
-  .u-lg-size1of3 {
-    flex-basis: auto !important;
-    width: calc(100% / 3) !important;
+  .d-Post {
+    --Post-paddingSize: 24px;
   }
 }
