@@ -24,11 +24,11 @@
 
 .d-Grid {
   --Grid-gapSize: 20px;
-  --Grid-columns: 1fr;
+  --Grid-columnSizes: 1fr;
 
   display: grid;
   grid-gap: var(--Grid-gapSize);
-  grid-template-columns: var(--Grid-columns);
+  grid-template-columns: var(--Grid-columnSizes);
   flex-wrap: initial;
   margin: initial;
 }
@@ -36,13 +36,13 @@
 @media (min-width: 600px) {
   .d-Grid {
     --Grid-gapSize: 24px;
-    --Grid-columns: repeat(2, 1fr);
+    --Grid-columnSizes: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 960px) {
   .d-Grid {
-    --Grid-columns: repeat(3, 1fr);
+    --Grid-columnSizes: repeat(3, 1fr);
   }
 }
 
