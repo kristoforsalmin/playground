@@ -1,17 +1,21 @@
 /* Container
    ========================================================================== */
 
-.d-Container {
+:root {
   --Container-paddingSize: 20px;
+}
 
+.d-Container {
   padding-right: var(--Container-paddingSize);
   padding-left: var(--Container-paddingSize);
 }
 
 @media (min-width: 600px) {
-  .d-Container {
-    --Container-paddingSize: 0;
+  :root {
+    --Container-paddingSize: 20px;
+  }
 
+  .d-Container {
     width: 80%;
     max-width: 980px;
     margin-right: auto;
@@ -22,10 +26,13 @@
 /* Grid
    ========================================================================== */
 
-.d-Grid {
+/* stylelint-disable-next-line no-duplicate-selectors */
+:root {
   --Grid-gapSize: 20px;
   --Grid-columnSizes: 1fr;
+}
 
+.d-Grid {
   display: grid;
   grid-gap: var(--Grid-gapSize);
   grid-template-columns: var(--Grid-columnSizes);
@@ -34,14 +41,14 @@
 }
 
 @media (min-width: 600px) {
-  .d-Grid {
+  :root {
     --Grid-gapSize: 24px;
     --Grid-columnSizes: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 960px) {
-  .d-Grid {
+  :root {
     --Grid-columnSizes: repeat(3, 1fr);
   }
 }
@@ -49,9 +56,12 @@
 /* Post
    ========================================================================== */
 
-.d-Post {
+/* stylelint-disable-next-line no-duplicate-selectors */
+:root {
   --Post-paddingSize: 20px;
+}
 
+.d-Post {
   height: 100%;
   background-color: whitesmoke;
 }
@@ -61,7 +71,7 @@
 }
 
 @media (min-width: 600px) {
-  .d-Post {
+  :root {
     --Post-paddingSize: 24px;
   }
 }
